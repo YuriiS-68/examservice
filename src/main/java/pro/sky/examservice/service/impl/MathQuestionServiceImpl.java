@@ -1,18 +1,19 @@
 package pro.sky.examservice.service.impl;
 
 import org.springframework.stereotype.Service;
-import pro.sky.examservice.dao.impl.JavaQuestionRepositoryImpl;
+import pro.sky.examservice.dao.impl.MathQuestionRepositoryImpl;
 import pro.sky.examservice.model.Question;
 import pro.sky.examservice.service.QuestionService;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Random;
 
 @Service
-public class JavaQuestionServiceImpl implements QuestionService {
+public class MathQuestionServiceImpl implements QuestionService {
+    private final MathQuestionRepositoryImpl questionRepository;
 
-    private final JavaQuestionRepositoryImpl questionRepository;
-
-    public JavaQuestionServiceImpl(JavaQuestionRepositoryImpl questionRepository) {
+    public MathQuestionServiceImpl(MathQuestionRepositoryImpl questionRepository) {
         this.questionRepository = questionRepository;
     }
 
